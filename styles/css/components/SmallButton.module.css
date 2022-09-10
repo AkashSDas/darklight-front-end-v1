@@ -1,0 +1,5 @@
+.btn {
+  @apply font-gtwalsheim font-normal text-text-grey 
+  rounded-[8px] h-[28px] px-2 py-[2px] hover:bg-[#F2F2F4] 
+  transition-all;
+}

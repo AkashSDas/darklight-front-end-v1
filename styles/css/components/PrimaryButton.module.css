@@ -1,0 +1,5 @@
+.btn {
+  @apply font-gtwalsheim font-medium text-bg-white bg-btn-black 
+  rounded-[18px] h-[44px] px-6 py-2 shadow-blue-sm hover:shadow-blue-lg 
+  transition-all;
+}
