@@ -2,4 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* BASE */
 @import "./css/base/typography.css";
+
+/* TAILWIND */
+@import "./css/tailwind/typography.css";

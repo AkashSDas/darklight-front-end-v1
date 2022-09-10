@@ -1,0 +1,31 @@
+.h1 {
+  @apply font-gtwalsheim font-bold text-m-h1 tab:text-t-h1 lap:text-d-h1;
+}
+
+.h2 {
+  @apply font-gtwalsheim font-bold text-m-h2 tab:text-t-h2 lap:text-d-h2;
+}
+
+.h3 {
+  @apply font-gtwalsheim font-bold text-m-h3 tab:text-t-h3 lap:text-d-h3;
+}
+
+.h4 {
+  @apply font-gtwalsheim font-bold text-m-h4 tab:text-t-h4 lap:text-d-h4;
+}
+
+.body-intro {
+  @apply font-gtwalsheim font-medium text-m-body-intro tab:text-t-body-intro lap:text-d-body-intro;
+}
+
+.body {
+  @apply font-gtwalsheim font-normal text-m-body tab:text-t-body lap:text-d-body;
+}
+
+.caption {
+  @apply font-gtwalsheim font-normal text-m-caption tab:text-t-caption lap:text-d-caption;
+}
+
+.small {
+  @apply font-gtwalsheim font-normal text-m-small tab:text-t-small lap:text-d-small;
+}
