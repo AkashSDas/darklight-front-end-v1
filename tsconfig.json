@@ -16,7 +16,6 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@uikit/*": ["./components/UIKit/*"],
       "@components/*": ["./components/*"],
       "@lib/*": ["./lib/*"],
       "@styles/*": ["./styles/*"]
