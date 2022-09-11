@@ -1,12 +1,18 @@
+import { useOutsideAlerter } from "hooks/useOutsideAlerter";
 import Link from "next/link";
+import { useRef, useState } from "react";
 
 import { IconOutlineButton } from "@components/IconOutlineButton";
+import { MenuDropdown } from "@components/MenuDropdown";
 import { NavCoursesDropdown } from "@components/NavCoursesDropdown";
 import { OutlineButton } from "@components/OutlineButton";
+import { OutsideAlerter } from "@components/OutsideAlerter";
 import { PrimaryButton } from "@components/PrimaryButton";
+import iconBtnStyles from "@styles/css/components/IconOutlineButton.module.css";
 import styles from "@styles/css/components/OutlineButton.module.css";
 
 import ArrowDrownIcon from "../../public/icons/arrowdown.svg";
+import MenuIcon from "../../public/icons/menu.svg";
 import SearchIcon from "../../public/icons/search.svg";
 import LogoMoonIcon from "../../public/logo-moon.svg";
 import LogoTextIcon from "../../public/logo-text.svg";
@@ -22,7 +28,7 @@ export const Navbar = () => {
 };
 
 const CenterSection = () => (
-  <ul className="flex items-center gap-4">
+  <ul className="hidden desk:flex items-center gap-4 ">
     <li className="relative group">
       <button className={`${styles.btn} flex items-center gap-1`}>
         <span>Courses</span>
@@ -54,16 +60,34 @@ const LeftSection = () => (
   </Link>
 );
 
-const RightSection = () => (
-  <ul className="flex items-center gap-4">
-    <li>
-      <IconOutlineButton icon={<SearchIcon />} />
-    </li>
-    <li>
-      <OutlineButton label="Login" outline={false} />
-    </li>
-    <li>
-      <PrimaryButton label="Get Started" />
-    </li>
-  </ul>
-);
+const RightSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef, () => setIsOpen(false));
+
+  return (
+    <ul className="flex items-center gap-4">
+      <li>
+        <IconOutlineButton icon={<SearchIcon />} />
+      </li>
+      <li ref={wrapperRef} className="relative">
+        <button
+          className={`${iconBtnStyles.btn}`}
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          <MenuIcon />
+        </button>
+
+        {isOpen && <MenuDropdown />}
+      </li>
+      <li>
+        <OutlineButton label="Login" outline={false} />
+      </li>
+      <li>
+        <PrimaryButton label="Get Started" />
+      </li>
+    </ul>
+  );
+};
