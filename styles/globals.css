@@ -7,3 +7,7 @@
 
 /* TAILWIND */
 @import "./css/tailwind/typography.css";
+
+body {
+  @apply font-gtwalsheim;
+}
