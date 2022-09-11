@@ -1,19 +1,23 @@
 import { MouseEventHandler } from "react";
 
-import styles from "@styles/css/components/OutlineButton.module.css";
+import styles from "@styles/css/components/IconOutlineButton.module.css";
 
 interface Props {
-  label: string;
+  icon: any;
   outline?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export const OutlineButton = ({ label, outline = true, onClick }: Props) => {
+export const IconOutlineButton = ({
+  icon,
+  outline = false,
+  onClick,
+}: Props) => {
   const outlineStyle = outline ? "border-stroke1 border-solid border" : "";
 
   return (
     <button onClick={onClick} className={`${styles.btn} ${outlineStyle}`}>
-      {label}
+      {icon}
     </button>
   );
 };

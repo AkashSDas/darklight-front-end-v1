@@ -1,0 +1,4 @@
+.btn {
+  @apply rounded-[14px] px-2 py-2 h-[44px] w-[44px] hover:bg-[#F2F2F4] 
+  transition-all flex items-center justify-center;
+}
