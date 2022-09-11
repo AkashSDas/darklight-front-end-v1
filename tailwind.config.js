@@ -5,21 +5,20 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      "brand-blue": "#2849BD",
-      "bg-white": "#FAF9FC",
-      "btn-black": "#171717",
-      "btn-light-blue": "#CED5F0",
-      "text-black": "#171717",
-      "text-grey": "#3C3C3C",
-      "text-light-grey": "#8A8F99",
-      "text-white": "#FFFFFF",
-      "feedback-delete": "#E45656",
-      "feedback-success": "#7BB894",
-      stroke1: "#DCDEE3",
-    },
-
     extend: {
+      colors: {
+        "brand-blue": "#2849BD",
+        "bg-white": "#FAF9FC",
+        "btn-black": "#171717",
+        "btn-light-blue": "#CED5F0",
+        "text-black": "#171717",
+        "text-grey": "#3C3C3C",
+        "text-light-grey": "#8A8F99",
+        "text-white": "#FFFFFF",
+        "feedback-delete": "#E45656",
+        "feedback-success": "#7BB894",
+        stroke1: "#DCDEE3",
+      },
       fontFamily: {
         gtwalsheim: ["GTWalsheimPro", "system-ui", "sans-serif"],
       },
